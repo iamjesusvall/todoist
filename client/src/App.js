@@ -1,7 +1,9 @@
 function App() {
   return (
-    <div>
-      <h1>Todo List</h1>
+    <div className="h-screen w-screen bg-teal-50">
+      <div className="container mx-auto">
+        <h1>Todo list</h1>
+      </div>
     </div>
   );
 }
