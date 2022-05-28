@@ -10,9 +10,11 @@ export default function TodoList({ filter, todos }) {
             if (!filter) return true;
             return todo.completed === true;
           })
+          .sort((a, b) => (a.createdAt > b.createdAt ? 1 : -1))
           .map((todo) => (
             <TodoItem
               key={todo.id}
+              id={todo.id}
               description={todo.description}
               status={todo.completed}
             />

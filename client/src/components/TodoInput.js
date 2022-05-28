@@ -1,8 +1,8 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import { faPlus, faPen } from "@fortawesome/free-solid-svg-icons";
 
-export default function TodoInput({ newInput, onChange }) {
+export default function TodoInput({ newInput, onChange, selected }) {
   return (
     <div className="flex">
       <input
@@ -16,7 +16,11 @@ export default function TodoInput({ newInput, onChange }) {
         type="submit"
         className="px-3 py-1 bg-lime-700 rounded-r-md text-white hover:bg-lime-800"
       >
-        <FontAwesomeIcon icon={faPlus} />
+        {selected ? (
+          <FontAwesomeIcon icon={faPen} />
+        ) : (
+          <FontAwesomeIcon icon={faPlus} />
+        )}
       </button>
     </div>
   );
